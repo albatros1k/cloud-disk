@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+const ObjectId = require("mongodb").ObjectID;
 
 const User = new Schema({
   email: { type: String, required: true, unique: true },
