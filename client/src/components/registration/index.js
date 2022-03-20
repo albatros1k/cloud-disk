@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 
@@ -76,7 +76,7 @@ export const Registration = ({ isLogin = false }) => {
     <Card align="center" w="500px" br={20} p="30px" m="100px 0 0">
       <Heading fz={30}>{isLogin ? "Log In" : "Sign Up"}</Heading>
       <Input type="text" placeholder="Email" name="email" onChange={onChangeData} />
-      <Input type="text" placeholder="Password" name="password" onChange={onChangeData} />
+      <Input type="password" placeholder="Password" name="password" onChange={onChangeData} />
       <Btn onClick={isLogin ? onLogin : onSignUp}>{isLogin ? "Log In" : "Sign Up"}</Btn>
     </Card>
   );
