@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { registration } from "../../actions/userActions";
 
 import { Card } from "../../common";
 
@@ -65,16 +66,15 @@ export const Registration = () => {
     password: "",
   });
 
-  console.log(loginData);
-
   const onChangeData = (e) => setLoginData({ ...loginData, [e.target.name]: e.target.value });
+
+  const onRegistrate = () => registration(loginData);
 
   return (
     <Card align="center" w="500px" br={20} p="30px" m="100px 0 0">
       <Input type="text" placeholder="Email" name="email" onChange={onChangeData} />
       <Input type="text" placeholder="Password" name="password" onChange={onChangeData} />
-
-      <Btn>Sign Up</Btn>
+      <Btn onClick={onRegistrate}>Sign Up</Btn>
     </Card>
   );
 };
