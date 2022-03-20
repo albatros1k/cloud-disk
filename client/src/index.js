@@ -5,14 +5,11 @@ import { ThemeProvider } from "styled-components";
 import App from "./App";
 import { store } from "./reducers";
 import { theme } from "./common/theme";
-import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <Provider {...{ store }}>
     <ThemeProvider {...{ theme }}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <App />
     </ThemeProvider>
   </Provider>,
   document.getElementById("root")

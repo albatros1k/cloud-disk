@@ -6,7 +6,7 @@ import { Navbar } from "./styled";
 
 const routes = [
   { name: "Log In", path: "/login" },
-  { name: "Sign Up", path: "/Sign Up" },
+  { name: "Sign Up", path: "/signup" },
 ];
 
 export const NavBar = () => {

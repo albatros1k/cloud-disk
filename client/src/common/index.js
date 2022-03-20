@@ -47,6 +47,7 @@ export const Card = styled.section`
   background: #fff;
   position: relative;
   border-radius: ${({ br = 4 }) => `${br}px`};
+  box-shadow: 0px 1px 4px rgba(92, 92, 92, 0.25);
 `;
 
 export const Link = styled(NavLink)`
