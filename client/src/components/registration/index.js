@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { registration } from "../../actions/userActions";
+import { useDispatch } from "react-redux";
 
-import { Card } from "../../common";
+import { login, signup } from "../../actions/userActions";
+import { Card, Heading } from "../../common";
 
 export const Input = styled.input`
   border: none;
@@ -60,21 +61,23 @@ export const Btn = styled.button`
   }
 `;
 
-export const Registration = () => {
+export const Registration = ({ isLogin = false }) => {
   const [loginData, setLoginData] = useState({
     email: "",
     password: "",
   });
+  const dispatch = useDispatch();
 
   const onChangeData = (e) => setLoginData({ ...loginData, [e.target.name]: e.target.value });
-
-  const onRegistrate = () => registration(loginData);
+  const onSignUp = () => signup(loginData);
+  const onLogin = () => dispatch(login(loginData));
 
   return (
     <Card align="center" w="500px" br={20} p="30px" m="100px 0 0">
+      <Heading fz={30}>{isLogin ? "Log In" : "Sign Up"}</Heading>
       <Input type="text" placeholder="Email" name="email" onChange={onChangeData} />
       <Input type="text" placeholder="Password" name="password" onChange={onChangeData} />
-      <Btn onClick={onRegistrate}>Sign Up</Btn>
+      <Btn onClick={isLogin ? onLogin : onSignUp}>{isLogin ? "Log In" : "Sign Up"}</Btn>
     </Card>
   );
 };

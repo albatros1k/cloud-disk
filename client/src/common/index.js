@@ -51,6 +51,7 @@ export const Card = styled.section`
 `;
 
 export const Link = styled(NavLink)`
+  font-family: "Inspiration";
   font-weight: 700;
   font-size: 20px;
   line-height: 23px;
@@ -59,5 +60,5 @@ export const Link = styled(NavLink)`
   margin: ${({ m }) => m};
   transition: all 0.3s ease 0s;
   &:hover {
-    transform: translateX(3px)
+    transform: translateX(3px) scale(1.05); 
 `;
