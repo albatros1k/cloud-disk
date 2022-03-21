@@ -1,5 +1,6 @@
 {
   "serverPort": 5000,
   "dbUrl": "mongodb+srv://albatros1k:k260698k@cloud.qzzpj.mongodb.net/cloud?retryWrites=true&w=majority",
-  "secretKey": "mern-secret-key"
+  "secretKey": "mern-secret-key",
+  "filePath": "/Users/albertem/Documents/Pet Projects/mern-cloud-disk/server/files"
 }
