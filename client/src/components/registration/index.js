@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 
@@ -50,7 +50,6 @@ export const Btn = styled.button`
   color: ${({ theme: { white } }) => white};
   font-weight: 700;
   padding: 5px 10px;
-  align-self: flex-end;
   height: 32px;
   margin: ${({ m = "10px auto 0 auto" }) => m};
   transition: all 0.3s ease 0s;

@@ -6,6 +6,7 @@ export const fontProps = css`
   font-weight: ${({ fw = "normal" }) => fw};
   font-size: ${({ fz = 14 }) => `${fz}px`};
   color: ${({ theme: { primary, white } }) => (primary ? primary : white)};
+  text-transform: ${({ upper }) => (upper ? "uppercase" : "normal")};
 `;
 
 export const flex = css`
@@ -54,6 +55,10 @@ export const GridItem = styled.div`
 export const Heading = styled.h5`
   ${fontProps}
   margin: ${({ m = "0" }) => m};
+`;
+
+export const Title = styled(Heading)`
+  font-family: "Roboto";
 `;
 
 export const Column = styled.div`

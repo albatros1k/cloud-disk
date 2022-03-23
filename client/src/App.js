@@ -14,13 +14,13 @@ const App = () => {
 
   useEffect(() => {
     dispatch(auth());
-  }, []);
+  }, [dispatch]);
 
   return (
     <BrowserRouter>
       <Column align="center">
         <NavBar />
-        <Column>
+        <Column w="100%" align="center">
           <Routes>
             {!isAuth ? (
               <>
