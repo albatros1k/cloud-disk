@@ -51,9 +51,8 @@ export const Btn = styled.button`
   font-weight: 700;
   padding: 5px 10px;
   align-self: flex-end;
-  margin-top: 10px;
   height: 32px;
-  margin: auto;
+  margin: ${({ m = "10px auto 0 auto" }) => m};
   transition: all 0.3s ease 0s;
   cursor: pointer;
   &:hover {

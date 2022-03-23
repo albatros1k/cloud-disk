@@ -23,6 +23,34 @@ export const block = css`
   background: ${({ bg = "transparent" }) => bg};
 `;
 
+export const Grid = styled.div`
+  display: grid;
+  width: ${({ w = "100%" }) => w};
+  padding: ${({ p = 0 }) => p};
+  margin: ${({ m = 0 }) => m};
+  grid-template-columns: ${({ cols = "1fr" }) => cols};
+  grid-template-rows: ${({ rows = "1fr" }) => rows};
+  grid-column-gap: ${({ ySpacing = 0 }) => ySpacing};
+  grid-row-gap: ${({ xSpacing = 0 }) => xSpacing};
+  @media (max-width: 768px) {
+    grid-template-columns: ${({ mobileCols = "1fr" }) => mobileCols};
+    grid-template-rows: ${({ mobileRows = "1fr" }) => mobileRows};
+  }
+`;
+
+export const GridItem = styled.div`
+  grid-column-start: ${({ colFrom = "auto" }) => colFrom};
+  grid-column-end: ${({ colTo = "auto" }) => colTo};
+  grid-row-start: ${({ rowFrom = "auto" }) => rowFrom};
+  grid-row-end: ${({ rowTo = "auto" }) => rowTo};
+  @media (max-width: 768px) {
+    grid-column-start: auto;
+    grid-column-end: auto;
+    grid-row-start: auto;
+    grid-row-end: auto;
+  }
+`;
+
 export const Heading = styled.h5`
   ${fontProps}
   margin: ${({ m = "0" }) => m};
